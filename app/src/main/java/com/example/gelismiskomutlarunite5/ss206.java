@@ -9,19 +9,22 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Uyg10Activity extends AppCompatActivity {
-    public Asker asker;
-    public Tank tankci;
+public class ss206 extends AppCompatActivity {
+    public Asker2 asker;
+    public Tank2 tankci;
+    public topçu topçu2;
     String mesaj = "";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.uyg10_activity);
-        asker = new Asker();
-        tankci = new Tank();
+        setContentView(R.layout.ss206);
+        asker = new Asker2();
+        tankci = new Tank2();
+        topçu2 = new topçu();
         TextView textViewMesaj = findViewById(R.id.Mesaj);
         Button buttonAsker = findViewById(R.id.AskerAteşEt);
         Button buttonTankci = findViewById(R.id.TankçıAteşEt);
+        Button buttonTopçu = findViewById(R.id.TopçuAtes);
         buttonAsker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,10 +40,18 @@ public class Uyg10Activity extends AppCompatActivity {
             }
         });
 
+        buttonTopçu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mesaj = topçu2.atesEt();
+                textViewMesaj.setText(mesaj);
+            }
+        });
     }
 
     public void btnBack(View view) {
-        Intent uyg = new Intent(Uyg10Activity.this, MainActivity.class);
+        Intent uyg = new Intent(ss206.this, MainActivity.class);
         startActivity(uyg);
     }
 }
+

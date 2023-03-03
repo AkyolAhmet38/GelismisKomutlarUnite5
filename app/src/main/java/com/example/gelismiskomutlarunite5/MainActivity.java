@@ -78,4 +78,8 @@ public class MainActivity extends AppCompatActivity {
         Intent uyg = new Intent(MainActivity.this, Uyg13Activity.class);
         startActivity(uyg);
     }
+    public void button34(View view) {
+        Intent uyg = new Intent(MainActivity.this, ss206.class);
+        startActivity(uyg);
+    }
 }

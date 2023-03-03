@@ -22,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ss206"/>
         <activity android:name=".Uyg1Activity" android:label="@string/uyg1_isim"></activity>
         <activity android:name=".Uyg2Activity" android:label="@string/uyg2_isim"></activity>
         <activity android:name=".Uyg3Activity" android:label="@string/uyg3_isim"></activity>
